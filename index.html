@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- Futuristic Navbar Section -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="#">Portfolio</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-toggle" id="nav-toggle">
+            <span class="nav-icon"></span>
+            <span class="nav-icon"></span>
+            <span class="nav-icon"></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-text">
+            <h1>Welcome to My Futuristic Portfolio</h1>
+            <p>Connecting Creativity & Technology</p>
+            <a href="#portfolio" class="btn">Explore Portfolio</a>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+        <div class="hero-image">
+            <img src="./images/profile.webp" alt="Portfolio Image">
+        </div>
+    </header>
+
+    <!-- Work Section -->
+    <section id="portfolio" class="work-section">
+        <h2 class="section-title">My Work</h2>
+        <div class="work-grid">
+            <div class="work-item">
+                <img src="https://plus.unsplash.com/premium_photo-1678565999332-1cde462f7b24?w=500&auto=format&fit=crop&q=60" alt="Project 1">
+                <h3>Project One</h3>
+                <p>Description of your project.</p>
+            </div>
+            <div class="work-item">
+                <img src="https://images.unsplash.com/photo-1542744095-0d53267d353e?w=500&auto=format&fit=crop&q=60" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>Description of your project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>I'm an experienced web developer and designer specializing in creating modern, responsive websites.</p>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-item"><span>5+</span><p>Years Experience</p></div>
+            <div class="stat-item"><span>50+</span><p>Projects Completed</p></div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <h2>Blog</h2>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <h3>Post Title 1</h3>
+                <p>Short intro to blog post.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Post Title 2</h3>
+                <p>Short intro to blog post.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <p>Ready for your next project? Get in touch below!</p>
+        <a href="" class="contact-btn">Contact Me</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Your Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Toggle and Smooth Scroll -->
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
